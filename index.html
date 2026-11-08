@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>PantherBuy spreadsheet : guide des tailles, QC et sélection</title>
+<meta name="description" content="Explorez PantherBuy spreadsheet en français : catégories, mesures, photos QC et budget de livraison. Des repères clairs avant de consulter Cafans.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#642936">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="PantherBuy spreadsheet — Le carnet de sélection">
+<meta property="og:description" content="Choisir une catégorie, comparer les mesures et examiner les détails avant de commander. Un guide indépendant en français.">
+<meta name="twitter:card" content="summary">
+<!--
+Fichier : index.html.
+L'accès direct à Bing étant indisponible, le classement des dix premiers sites n'a pas pu être confirmé.
+Thèmes observés dans les résultats accessibles : catégories, liens produits, QC, tailles et expédition.
+Expressions secondaires : guide PantherBuy spreadsheet ; PantherBuy QC ; PantherBuy finds ; tailles et livraison PantherBuy.
+Renseigner une URL canonical propre à cette page après son hébergement.
+Les visuels sont illustratifs et ne décrivent pas le stock de Cafans.
+-->
+<style>
+:root{--paper:#f5f1e8;--ink:#292727;--wine:#642936;--line:#d9d1c6;--muted:#625c56;--white:#fffdf8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:hover{color:var(--wine)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--wine);outline-offset:5px}
+.wrap{max-width:1200px;margin:auto;padding:0 28px}
+header{border-bottom:1px solid var(--line)}
+.top{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:25px;font-weight:850;letter-spacing:-1px;text-decoration:none}
+.edition,.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px}
+.edition{color:var(--muted)}
+.categories{padding:24px 0 30px;border-bottom:1px solid var(--line)}
+.categories p{font-size:13px;margin:0 0 13px;color:var(--muted)}
+.catgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
+.catgrid a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:56px;border:1px solid var(--line);padding:11px 13px;text-decoration:none;font-size:14px;background:var(--white)}
+.catgrid a:hover{border-color:var(--wine)}
+.catgrid span{color:var(--wine)}
+.hero{display:grid;grid-template-columns:1.08fr 1fr;gap:50px;padding:58px 0}
+.eyebrow{color:var(--wine);font-weight:750;margin:0 0 15px}
+h1,h2,h3{line-height:1.12}
+h1{font-size:clamp(40px,5.5vw,72px);font-weight:650;letter-spacing:-3px;margin:0 0 25px}
+h1 em{font-family:Georgia,serif;font-weight:400;color:var(--wine)}
+.lead{font-size:18px;color:var(--muted);max-width:54ch}
+.button{display:inline-block;padding:14px 22px;background:var(--wine);color:white;text-decoration:none;font-weight:650;margin:16px 0}
+.button:hover{background:#47202a;color:white}
+.small{font-size:13px;color:var(--muted)}
+figure{margin:0}
+.hero figure{background:#e8e4dd;display:flex;flex-direction:column;justify-content:center;position:relative}
+.hero img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain}
+.hero figcaption{padding:15px 20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.stamp{position:absolute;left:18px;top:18px;background:var(--white);padding:7px 12px;font-size:12px;letter-spacing:1px}
+.answer{background:var(--wine);color:#fffaf3;padding:30px 34px;display:grid;grid-template-columns:230px 1fr;gap:30px}
+.answer h2{font-size:24px;margin:0}
+.answer p{margin:0}
+.section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:28px}
+.sectionhead h2{font-size:clamp(28px,3.8vw,43px);letter-spacing:-1px;margin:0}
+.sectionhead p{margin:0;max-width:380px;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.article{border-top:3px solid var(--wine);padding-top:18px}
+.number{font-size:13px;color:var(--wine);font-weight:800}
+.article h3{font-size:24px;margin:12px 0}
+.article p{color:var(--muted)}
+.article a{font-weight:650;font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.split h2{font-size:38px;letter-spacing:-1px;margin:0 0 20px}
+.checklist{padding-left:22px}
+.checklist li{padding:5px 0}
+.note{padding:20px 24px;border-left:3px solid var(--wine);background:var(--white)}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:15px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eae3d9}
+caption{text-align:left;font-weight:700;margin-bottom:12px}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-size:18px;font-weight:650;cursor:pointer;padding-right:10px}
+details p{max-width:85ch;color:var(--muted);margin-bottom:0}
+.end{display:flex;justify-content:space-between;align-items:center;gap:30px;background:#eae3d9;padding:30px;margin-top:40px}
+.end h2{margin:0;font-size:29px}
+.end p{margin-bottom:0}
+.end .button{white-space:nowrap}
+footer{padding:30px 0 40px;font-size:13px;color:var(--muted)}
+footer p{max-width:95ch}
+.research{margin-top:24px;font-size:13px;color:var(--muted)}
+.research summary{font-size:14px}
+@media(max-width:850px){
+.catgrid{grid-template-columns:repeat(3,1fr)}
+.hero{gap:25px}
+.grid3{gap:18px}
+.answer{grid-template-columns:1fr;gap:15px}
+.split{gap:25px}
+}
+@media(max-width:620px){
+.wrap{padding:0 18px}
+.top{min-height:70px}
+.edition{font-size:10px;letter-spacing:1px}
+.catgrid{grid-template-columns:repeat(2,1fr)}
+.catgrid a{font-size:13px}
+.hero{grid-template-columns:1fr;padding:34px 0;gap:25px}
+h1{letter-spacing:-2px}
+.hero figure{max-width:440px;width:100%;margin:auto}
+.hero img{max-height:360px}
+.grid3,.split{grid-template-columns:1fr}
+.section{padding:38px 0}
+.sectionhead{display:block}
+.sectionhead p{margin-top:14px}
+.answer{padding:24px}
+.end{display:block;padding:24px}
+.end .button{white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){
+*{scroll-behavior:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "name":"PantherBuy spreadsheet : guide des tailles, QC et sélection",
+      "inLanguage":"fr",
+      "description":"Guide indépendant pour organiser une sélection, comparer les mesures, examiner les photos QC et anticiper les frais de livraison.",
+      "about":{"@type":"Thing","name":"PantherBuy spreadsheet"}
+    },
+    {
+      "@type":"Article",
+      "headline":"Avant de commander : trois décisions utiles",
+      "inLanguage":"fr",
+      "author":{"@type":"Organization","name":"Cafans — carnet de sélection"},
+      "articleBody":"Pour une paire de chaussures, comparer la longueur du pied et le tableau du modèle. Pour un vêtement, comparer les mesures à plat avec une pièce déjà portée. Pour un accessoire, vérifier les dimensions, la matière et les finitions. Les visuels illustratifs ne garantissent ni le stock ni l'authenticité."
+    },
+    {
+      "@type":"FAQPage",
+      "inLanguage":"fr",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Qu'est-ce qu'un PantherBuy spreadsheet ?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Dans le contexte de cette recherche, il s'agit d'une liste de repérage de produits et de liens, souvent organisée par catégorie. Son contenu et sa fiabilité dépendent de son éditeur ; la présence d'un article ne garantit ni sa disponibilité ni son authenticité."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Cette page est-elle le site officiel de PantherBuy ?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Non. Il s'agit d'un guide éditorial indépendant. Les liens de consultation dirigent vers Cafans, et les liens de catégories vers les rubriques Cafans indiquées."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Que faut-il regarder sur les photos QC ?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Comparez la couleur, les coutures, les dimensions, les fermetures et l'état général à la fiche exacte. Une photo QC peut montrer des défauts visibles, mais elle ne prouve pas à elle seule l'authenticité ou la durabilité."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Comment choisir la bonne taille ?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Mesurez une pièce qui vous convient, puis comparez ses mesures au tableau du vendeur. Pour les chaussures, utilisez la longueur du pied et le guide propre au modèle ; une étiquette EU ou US seule ne suffit pas."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Le prix d'un article inclut-il la livraison ?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Ne le supposez pas. Vérifiez séparément le prix du produit, les éventuels frais de service, le transport, la conversion de devise et les taxes applicables à votre destination."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Les articles illustrés sont-ils disponibles sur Cafans ?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Les images servent de références visuelles. La disponibilité, les variantes, la provenance et les conditions d'achat doivent être vérifiées sur la fiche consultée."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/sbfph/">
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <a class="logo" href="https://www.cafans.com">cafans.com</a>
+    <span class="edition">Le carnet de sélection · Français</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="categories" aria-label="Catégories sur Cafans">
+    <p>Choisissez votre univers — accès direct aux catégories Cafans</p>
+    <div class="catgrid">
+      <a href="https://cafans.com/category-911-Shoes.html">Chaussures <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Sweats / Pulls <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-913-T-Shirts.html">T-shirts <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-914-Jackets.html">Vestes <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-915-Pants%2FShorts.html">Pantalons / Shorts <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-916-Headwear.html">Casquettes / Bonnets <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-917-Sets.html">Ensembles <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Sous-vêtements <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-919-Jersey.html">Maillots <span aria-hidden="true">↗</span></a>
+      <a href="https://cafans.com/category-920-Accessories.html">Accessoires <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+
+  <section class="hero" aria-labelledby="titre">
+    <div>
+      <p class="eyebrow">Repérer · Comparer · Choisir</p>
+      <h1 id="titre">PantherBuy spreadsheet<br><em>Le sens du détail.</em></h1>
+      <p class="lead">Une sélection réussie commence par quelques bonnes questions : quelle coupe, quelles mesures, quelles finitions ? Ce guide en français vous aide à passer d'une référence repérée à une fiche produit examinée avec attention.</p>
+      <a class="button" href="https://www.cafans.com">Explorer le catalogue Cafans ↗</a>
+      <p class="small">Guide indépendant. Les liens mènent à Cafans ; aucune affiliation officielle avec PantherBuy ou les marques citées n'est revendiquée.</p>
+    </div>
+    <figure>
+      <span class="stamp">ÉTUDE DE SILHOUETTE / 01</span>
+      <img
+        src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,q_auto:eco/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/AIR%2BFORCE%2B1%2B%2707.png"
+        alt="Basket Nike Air Force 1 '07 blanche, présentée de profil"
+        width="864"
+        height="864"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async">
+      <figcaption>Nike Air Force 1 '07 — référence visuelle de basket blanche. Illustration uniquement ; disponibilité sur Cafans à vérifier.</figcaption>
+    </figure>
+  </section>
+
+  <aside class="answer" aria-labelledby="reponse">
+    <h2 id="reponse">La réponse en bref</h2>
+    <p>Un <strong>PantherBuy spreadsheet</strong> sert à repérer des références et des liens par catégorie. Pour choisir, vérifiez ensuite la fiche du vendeur, les mesures, les photos disponibles et les conditions de livraison. Une ligne dans un tableau ne remplace pas ces vérifications.</p>
+  </aside>
+
+  <section class="section" aria-labelledby="decisions">
+    <div class="sectionhead">
+      <h2 id="decisions">Avant de commander :<br>trois décisions utiles</h2>
+      <p>Un mini-guide PantherBuy spreadsheet pour rendre votre recherche plus précise, sans multiplier les achats au hasard.</p>
+    </div>
+    <div class="grid3">
+      <article class="article">
+        <span class="number">01 / CHAUSSURES</span>
+        <h3>Partir du pied,<br>puis du modèle.</h3>
+        <p>Pour comparer des baskets basses, relevez la longueur du pied et consultez le tableau propre au modèle. Examinez la largeur annoncée, la forme de l'avant-pied et les photos de la semelle. Un même numéro ne garantit pas la même sensation.</p>
+        <p>Une paire Nike blanche peut servir de point de départ visuel pour une tenue sobre ; la matière et l'ajustement restent à vérifier sur la fiche exacte.</p>
+        <a href="https://www.cafans.com">Consulter les références sur Cafans ↗</a>
+      </article>
+
+      <article class="article">
+        <span class="number">02 / VÊTEMENTS</span>
+        <h3>Lire la coupe,<br>mesurer à plat.</h3>
+        <p>Pour un sweat à capuche, comparez la largeur de poitrine, la longueur du dos et les manches avec une pièce que vous portez déjà. Pour une veste, prévoyez l'espace nécessaire à la couche portée dessous.</p>
+        <p>La composition d'un t-shirt, l'épaisseur d'un pull et la longueur d'un short comptent davantage qu'une simple mention « oversize ».</p>
+        <a href="https://www.cafans.com">Explorer les vêtements sur Cafans ↗</a>
+      </article>
+
+      <article class="article">
+        <span class="number">03 / ACCESSOIRES</span>
+        <h3>Vérifier l'usage,<br>puis les finitions.</h3>
+        <p>Pour une casquette, cherchez un tour de tête et un système de réglage. Pour un bijou, demandez la matière, les dimensions et le type de fermoir. Pour un foulard, vérifiez son format et ses consignes d'entretien.</p>
+        <p>Les références Louis Vuitton, Gucci, Hermès ou Dior doivent être identifiées précisément : un nom de marque ou une image ne suffit pas à établir la provenance.</p>
+        <a href="https://www.cafans.com">Découvrir les accessoires sur Cafans ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split" aria-labelledby="qc">
+    <div>
+      <p class="eyebrow">Dossier / PantherBuy QC</p>
+      <h2 id="qc">Les photos donnent des indices. Regardez les bons.</h2>
+      <p>Les photos QC, ou photos de contrôle qualité, peuvent aider à examiner un article lorsqu'elles correspondent à la variante réellement commandée. Pour vos <strong>PantherBuy finds</strong>, commencez par identifier le modèle, le coloris et la taille avant toute comparaison.</p>
+      <ul class="checklist">
+        <li><strong>Vue générale :</strong> couleur, proportions et cohérence des deux côtés.</li>
+        <li><strong>Coutures et bords :</strong> fils visibles, raccords et zones de tension.</li>
+        <li><strong>Mesures :</strong> règle lisible, points de mesure et unité utilisée.</li>
+        <li><strong>Fermetures :</strong> zip, boutons, boucle et montage du fermoir.</li>
+        <li><strong>Variante :</strong> même référence, même matière et même coloris que la fiche.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="note">
+        <h3>Ce qu'une image ne permet pas de conclure</h3>
+        <p>Une belle photo ne prouve ni l'authenticité, ni le confort, ni la tenue au lavage. Pour un article de marque, demandez des éléments de provenance et privilégiez un vendeur dont l'identité et les conditions sont claires.</p>
+      </div>
+      <h3>Une demande de détail efficace</h3>
+      <p>Décrivez une zone précise : « photo du talon à plat », « largeur de poitrine sous les emmanchures » ou « gros plan du fermoir ». Cette formulation est plus utile qu'une demande générale de photos supplémentaires.</p>
+      <p class="small">Les visuels de cette page sont des illustrations éditoriales et ne constituent pas des photos QC d'une commande.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="budget">
+    <div class="sectionhead">
+      <h2 id="budget">Le budget se calcule<br>jusqu'à destination.</h2>
+      <p>Avant de valider une sélection, distinguez le prix affiché du montant total à payer.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <caption>Tailles et livraison PantherBuy : les informations à réunir</caption>
+        <thead>
+          <tr>
+            <th scope="col">Point à comparer</th>
+            <th scope="col">Question à poser</th>
+            <th scope="col">Pourquoi cela compte</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Prix et variante</th>
+            <td>Le montant concerne-t-il le bon modèle, la bonne taille et la quantité voulue ?</td>
+            <td>Une option différente peut changer le prix.</td>
+          </tr>
+          <tr>
+            <th scope="row">Frais de service et devise</th>
+            <td>Quels frais et quel taux de conversion seront appliqués au paiement ?</td>
+            <td>Le montant converti peut différer d'une estimation.</td>
+          </tr>
+          <tr>
+            <th scope="row">Transport</th>
+            <td>Le devis utilise-t-il le poids réel ou volumétrique, et quel emballage ?</td>
+            <td>Le volume et la destination peuvent modifier le coût.</td>
+          </tr>
+          <tr>
+            <th scope="row">Taxes et formalités</th>
+            <td>Quelles taxes sont comprises et lesquelles restent éventuelles à l'arrivée ?</td>
+            <td>Le traitement dépend du pays et du mode d'envoi.</td>
+          </tr>
+          <tr>
+            <th scope="row">Retour et assistance</th>
+            <td>Quel délai, quelle procédure et quels frais s'appliquent à cet article ?</td>
+            <td>Une condition générale ne couvre pas forcément toutes les variantes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Aucun tarif, délai d'expédition ou avantage commercial n'est garanti ici. Vérifiez les conditions actuelles auprès du service utilisé.</p>
+  </section>
+
+  <section class="section split" aria-labelledby="methode">
+    <div>
+      <p class="eyebrow">Carnet pratique</p>
+      <h2 id="methode">Une sélection courte,<br>des références claires.</h2>
+      <p>Pour utiliser votre recherche PantherBuy spreadsheet au quotidien, notez pour chaque article son lien, sa référence, sa variante, ses mesures et la date de consultation. Ajoutez seulement les informations utiles à une décision.</p>
+      <p>Commencez par une pièce principale : une paire de baskets, une veste ou un ensemble. Comparez ensuite les couleurs et les proportions des autres pièces. Un accessoire apporte un accent ; il n'a pas besoin de répéter tous les motifs de la tenue.</p>
+    </div>
+    <div class="note">
+      <h3>Votre fiche de comparaison</h3>
+      <ul class="checklist">
+        <li>Référence exacte et lien encore accessible.</li>
+        <li>Couleur, taille et composition annoncées.</li>
+        <li>Mesures comparées à une pièce personnelle.</li>
+        <li>Photos de détails et questions non résolues.</li>
+        <li>Coût total estimé et conditions de retour.</li>
+      </ul>
+      <a href="https://www.cafans.com">Commencer ma recherche sur Cafans ↗</a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq">
+    <div class="sectionhead">
+      <h2 id="faq">Questions fréquentes</h2>
+      <p>Des réponses directes pour poursuivre votre recherche avec des repères concrets.</p>
+    </div>
+
+    <details open>
+      <summary>Qu'est-ce qu'un PantherBuy spreadsheet ?</summary>
+      <p>Dans le contexte de cette recherche, il s'agit d'une liste de repérage de produits et de liens, souvent organisée par catégorie. Son contenu et sa fiabilité dépendent de son éditeur ; la présence d'un article ne garantit ni sa disponibilité ni son authenticité.</p>
+    </details>
+
+    <details>
+      <summary>Cette page est-elle le site officiel de PantherBuy ?</summary>
+      <p>Non. Il s'agit d'un guide éditorial indépendant. Les liens de consultation dirigent vers Cafans, et les liens de catégories vers les rubriques Cafans indiquées.</p>
+    </details>
+
+    <details>
+      <summary>Que faut-il regarder sur les photos QC ?</summary>
+      <p>Comparez la couleur, les coutures, les dimensions, les fermetures et l'état général à la fiche exacte. Une photo QC peut montrer des défauts visibles, mais elle ne prouve pas à elle seule l'authenticité ou la durabilité.</p>
+    </details>
+
+    <details>
+      <summary>Comment choisir la bonne taille ?</summary>
+      <p>Mesurez une pièce qui vous convient, puis comparez ses mesures au tableau du vendeur. Pour les chaussures, utilisez la longueur du pied et le guide propre au modèle ; une étiquette EU ou US seule ne suffit pas.</p>
+    </details>
+
+    <details>
+      <summary>Le prix d'un article inclut-il la livraison ?</summary>
+      <p>Ne le supposez pas. Vérifiez séparément le prix du produit, les éventuels frais de service, le transport, la conversion de devise et les taxes applicables à votre destination.</p>
+    </details>
+
+    <details>
+      <summary>Les articles illustrés sont-ils disponibles sur Cafans ?</summary>
+      <p>Les images servent de références visuelles. La disponibilité, les variantes, la provenance et les conditions d'achat doivent être vérifiées sur la fiche consultée.</p>
+    </details>
+  </section>
+
+  <div class="end">
+    <div>
+      <h2>Passer du repérage à la comparaison.</h2>
+      <p>Ouvrez Cafans et examinez les informations de chaque fiche.</p>
+    </div>
+    <a class="button" href="https://www.cafans.com">Visiter cafans.com ↗</a>
+  </div>
+
+  <details class="research">
+    <summary>Transparence éditoriale et recherche</summary>
+    <p>Thèmes repérés dans les résultats accessibles : catalogues par catégorie, liens produits, photos QC et expédition. Pages consultées ou repérées : QCRadar, pantherbuysheets.com, pantherbuy.org, pantherbuy.co et pantherbuyspreadsheet.com. L'accès direct à Bing n'a pas abouti : cette page ne revendique pas l'analyse certifiée des dix premiers résultats de sa première page. Les promesses de prix, de contrôle et de disponibilité de sites tiers ne sont pas reprises comme des faits établis.</p>
+  </details>
+</main>
+
+<footer class="wrap">
+  <a class="logo" href="https://www.cafans.com">cafans.com</a>
+  <p>PantherBuy spreadsheet — carnet de sélection en français. Les marques citées appartiennent à leurs propriétaires respectifs. Leur mention et le visuel illustratif n'impliquent aucun partenariat, agrément ou garantie d'authenticité. Cette page ne traite pas les commandes.</p>
+</footer>
+</body>
+</html>
